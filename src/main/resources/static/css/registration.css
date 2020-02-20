@@ -1,0 +1,21 @@
+@import "common.css";
+
+.confirm{
+    background-color: #DF691A;
+    color: #fdfdff;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+    padding: .5em 1em;
+}
+.confirm:hover,
+.confirm:focus {
+    background: #d49420;
+}
+.validation_message{
+    color: #ff342a;
+}
+
+#formFooter {
+    min-width: 300px;
+}

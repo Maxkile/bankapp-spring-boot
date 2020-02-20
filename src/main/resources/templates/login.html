@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <title> Login</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div th:insert="common :: header (First = 'Sign In',Second = 'Sign Up',Third = 'About')"></div>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+
+            <div class="fadeIn first">
+                <label id="lable">Sign In</label>
+            </div>
+
+            <form th:userDto="${user}" th:action="@{/login}" th:method="post">
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login" required autofocus th:field="*{user.username}">
+                <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required th:field="*{user.password}">
+<!--                 <button class="confirm"> Sign in</button>-->
+                <input id="button-sub" type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+
+            <div id="formFooter">
+                <a class="underlineHover" href="/password/reset">Forgot Password?</a>
+                <p></p>
+                <a class="underlineHover" href="registration">Not registered yet? Click here</a>
+            </div>
+        </div>
+    </div>
+
+    <div th:insert="common :: footer"></div>
+</body>
+</html>

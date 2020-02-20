@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill</title>
+<!--    <script type='module' src="js/billPlot.js"></script>-->
+</head>
+<body>
+    <p> BillId: [[${billId}]]</p>
+    <p> HolderId: [[${holderId}]]</p>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+        <script th:src="@{/js/test.js}">
+            $(document).ready(function () {
+                const x = 'qwe';
+                $('qwe').click(f(x));
+            })
+        </script>
+        <button th:onclick="buildBillPlot('[[${holderId}]]')" style="cursor: pointer"> ShowPlot </button>
+    </div>
+</body>
+</html>

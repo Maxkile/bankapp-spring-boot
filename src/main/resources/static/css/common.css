@@ -1,0 +1,35 @@
+.body-container, #header, #footer {
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    background-clip: border-box;
+}
+
+.body-container{
+    padding-left: 1rem;
+    padding-top: 1rem;
+    background-color: #f1effc;
+}
+
+body{
+    background-color: #f1effc !important;
+}
+
+
+
+#logout {
+    text-align: center;
+}
+
+.container {
+    min-height: calc(100vh - 80px);
+}
+
+.footer {
+    text-align: right;
+    color: crimson;
+    padding-right: 1%;
+}
+
+.nav-bar-second {
+    padding-right: 25px !important;
+}
